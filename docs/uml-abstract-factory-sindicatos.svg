@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680">
+  <style>
+    .box { fill: #f8fafc; stroke: #1e3a5f; stroke-width: 2; }
+    .title { fill: #dbeafe; stroke: #1e3a5f; stroke-width: 2; }
+    .text { font-family: Arial, sans-serif; font-size: 16px; fill: #172033; }
+    .name { font-family: Arial, sans-serif; font-size: 17px; font-weight: bold; fill: #102a43; }
+    .line { stroke: #334e68; stroke-width: 2; fill: none; }
+    .dash { stroke-dasharray: 8 5; }
+  </style>
+  <text x="550" y="35" text-anchor="middle" class="name" font-size="24">
+    Abstract Factory - Sindicatos
+  </text>
+
+  <rect x="40" y="80" width="250" height="110" class="box"/>
+  <rect x="40" y="80" width="250" height="34" class="title"/>
+  <text x="165" y="103" text-anchor="middle" class="name">FabricaSindical</text>
+  <text x="55" y="140" class="text">&lt;&lt;interface&gt;&gt;</text>
+  <text x="55" y="165" class="text">+ criarCarteira()</text>
+  <text x="55" y="185" class="text">+ criarBoletim()</text>
+
+  <rect x="40" y="270" width="250" height="110" class="box"/>
+  <rect x="40" y="270" width="250" height="34" class="title"/>
+  <text x="165" y="293" text-anchor="middle" class="name">FabricaMetalurgicos</text>
+  <text x="55" y="330" class="text">+ criarCarteira()</text>
+  <text x="55" y="355" class="text">+ criarBoletim()</text>
+  <text x="55" y="375" class="text">implements FabricaSindical</text>
+
+  <rect x="40" y="460" width="250" height="110" class="box"/>
+  <rect x="40" y="460" width="250" height="34" class="title"/>
+  <text x="165" y="483" text-anchor="middle" class="name">FabricaProfessores</text>
+  <text x="55" y="520" class="text">+ criarCarteira()</text>
+  <text x="55" y="545" class="text">+ criarBoletim()</text>
+  <text x="55" y="565" class="text">implements FabricaSindical</text>
+
+  <rect x="420" y="80" width="250" height="110" class="box"/>
+  <rect x="420" y="80" width="250" height="34" class="title"/>
+  <text x="545" y="103" text-anchor="middle" class="name">CarteiraSindical</text>
+  <text x="435" y="140" class="text">&lt;&lt;interface&gt;&gt;</text>
+  <text x="435" y="170" class="text">+ emitir(nomeAssociado)</text>
+
+  <rect x="790" y="80" width="250" height="110" class="box"/>
+  <rect x="790" y="80" width="250" height="34" class="title"/>
+  <text x="915" y="103" text-anchor="middle" class="name">BoletimSindical</text>
+  <text x="805" y="140" class="text">&lt;&lt;interface&gt;&gt;</text>
+  <text x="805" y="170" class="text">+ publicar()</text>
+
+  <rect x="420" y="270" width="250" height="110" class="box"/>
+  <rect x="420" y="270" width="250" height="34" class="title"/>
+  <text x="545" y="293" text-anchor="middle" class="name">CarteiraMetalurgicos</text>
+  <text x="435" y="330" class="text">+ emitir(nomeAssociado)</text>
+  <text x="435" y="360" class="text">implements CarteiraSindical</text>
+
+  <rect x="790" y="270" width="250" height="110" class="box"/>
+  <rect x="790" y="270" width="250" height="34" class="title"/>
+  <text x="915" y="293" text-anchor="middle" class="name">BoletimMetalurgicos</text>
+  <text x="805" y="330" class="text">+ publicar()</text>
+  <text x="805" y="360" class="text">implements BoletimSindical</text>
+
+  <rect x="420" y="460" width="250" height="110" class="box"/>
+  <rect x="420" y="460" width="250" height="34" class="title"/>
+  <text x="545" y="483" text-anchor="middle" class="name">CarteiraProfessores</text>
+  <text x="435" y="520" class="text">+ emitir(nomeAssociado)</text>
+  <text x="435" y="550" class="text">implements CarteiraSindical</text>
+
+  <rect x="790" y="460" width="250" height="110" class="box"/>
+  <rect x="790" y="460" width="250" height="34" class="title"/>
+  <text x="915" y="483" text-anchor="middle" class="name">BoletimProfessores</text>
+  <text x="805" y="520" class="text">+ publicar()</text>
+  <text x="805" y="550" class="text">implements BoletimSindical</text>
+
+  <rect x="365" y="610" width="370" height="50" class="box"/>
+  <text x="550" y="642" text-anchor="middle" class="name">AssembleiaSindical (cliente)</text>
+
+  <path d="M165 190 L165 270" class="line"/>
+  <path d="M165 190 L165 460" class="line"/>
+  <path d="M290 135 L420 135" class="line dash"/>
+  <path d="M290 155 L790 155" class="line dash"/>
+  <path d="M290 325 L420 325" class="line dash"/>
+  <path d="M290 345 L790 325" class="line dash"/>
+  <path d="M290 515 L420 515" class="line dash"/>
+  <path d="M290 535 L790 515" class="line dash"/>
+  <path d="M545 190 L545 270" class="line"/>
+  <path d="M545 190 L545 460" class="line"/>
+  <path d="M915 190 L915 270" class="line"/>
+  <path d="M915 190 L915 460" class="line"/>
+  <path d="M550 610 L550 570" class="line dash"/>
+</svg>
